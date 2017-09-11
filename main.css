@@ -1,0 +1,260 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+h2 {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 200%;
+    color: #2c2c2c;
+    text-align: center;
+    text-decoration: underline;
+}
+p {
+    font-family: Verdana, Geneva, sans-serif;
+    color: #2c2c2c;
+    font-size: 140%;
+    line-height: 190ptaj;
+    font-weight: 300;
+}
+img {
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+.intro {
+    height: 100px;
+    width: 100%;
+    margin: auto;
+    background: #fff url() 0 0 no-repeat;
+}
+.intro .inner {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    max-width: none;
+}
+
+.content {
+    max-width: 600px;
+    margin: auto;
+}
+h1 {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 300%;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    padding: 2%;
+    text-shadow: 0 0 250px #000;
+}
+.content p {
+    color: #fff;
+    text-align: center;
+    margin-top: -10%;
+}
+.inner {
+    max-width: 600px;
+    margin: auto;
+    font-size: 170%;
+    line-height: 1.6;
+    padding: 10px;
+}
+
+nav  {
+    float: left;
+    padding: 5% 5% 0 0;
+    height: 50px;
+}
+nav ul {
+    list-style-type: none;
+    float: left;
+}
+nav ul li {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 120%;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+nav ul, nav:active ul {
+    display: none;
+    padding: 8px 0;
+    left: 45px;
+    top: 60px;
+    width: 20%;
+    z-index: 1000;
+}
+nav li {
+    width: 100%;
+    padding: 8px 0 10px 7px;
+    margin: 0;
+}
+nav:hover ul {
+    display: block;
+    position: absolute;
+}
+#menu-icon {
+    width: 30px;
+    height: 26px;
+    display: inline-block;
+    margin: 50px 0  0 50px;
+}
+.left-col {
+    width: 60%;
+    float: left;
+    margin: 4% 0 4% 4%;
+}
+.sidebar {
+    width: 26%;
+    float: left;
+    margin: 4%;
+}
+.one-third-port {
+    width: 29%;
+    padding: 2%;
+    float: left;
+}
+.one-third-port img:hover {
+    opacity: 0.6;
+}
+.contant p {
+    text-align: center;
+    letter-spacing: 5px;
+}
+.contact a {
+    color: #3c3c3c;
+    text-decoration: none;
+}
+.break {
+    display: none;
+}
+.clearfix {
+    clear: both;
+    height: 3%;
+}
+.parallax-inner {
+    padding-top: 17%;
+    
+    
+}
+
+.socal li {
+    display: inline;
+}
+.social i {
+    font-size: 270%;
+    margin: 1% 5% 7% 4%;
+    color: #2c2c2c;
+}
+.social i:hover {
+    color: #606060;
+}
+footer.second {
+    background: #2c2c2c;
+}
+footer.second p {
+    color: #fff;
+    text-align: center;
+    padding: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
