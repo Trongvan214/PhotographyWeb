@@ -53,11 +53,16 @@ img
     max-width: 100%
     height: auto
     width: auto
+
+.clearfix 
+    clear: both
+    height: 3%
 //end global styles
 
 /*----------------------------*/
-    /*Start styles intro*/ 
+    /*Start elem. styles*/ 
 /*----------------------------*/
+// start intro 
 .intro 
     height: 100%
     width: 100%
@@ -75,7 +80,7 @@ img
             max-width: 600px
             margin: auto
 
-// + start [nav] 
+// + start nav 
 nav 
     padding-left: 30px
     height: 100vh
@@ -145,9 +150,10 @@ nav ul li a:hover:before
     -webkit-transform: scaleX(1)
     transform: scaleX(1)
 /*--------end underline animation---------*/
-// end [nav]
+// + end nav
+// end intro 
 
-//start homepage text (center)
+// + start homepage text (center)
 .inner 
     max-width: 600px
     margin: auto
@@ -158,84 +164,85 @@ nav ul li a:hover:before
         color: $pure-white
         text-align: center
         margin-top: -10%
+// + end homepage text (center)
 
+//start about page 
 .about-left-col 
     width: 48%
     float: left
     margin: 4% 4% 0 4%
-
-.service-left-col 
-    width: 48%
-    float: left
-    margin: 0 4%
-
-.service-left-col > p,
-.about-left-col > p 
-    text-indent: 6%
+    & > p 
+        text-indent: 6%
 
 .about-sidebar 
     width: 40%
     float: left
     margin: 6% 4% 0 0
+//end about page
+
+//start portfolio page
+.one-third-port 
+    width: 29.333333%
+    padding: 2%
+    float: left
+    img:hover 
+        opacity: .6
+//end portfolio page 
+
+//start service page
+.service-left-col 
+    width: 48%
+    float: left
+    margin: 0 4%
+    & > p
+        text-indent: 6%
 
 .service-sidebar 
     width: 40%
     float: left
     margin: 2% 4% 2% 0
+//end service page        
 
-.one-third-port 
-    width: 29.333333%
-    padding: 2%
-    float: left
-
-.one-third-port img:hover 
-    opacity: .6         
-
-.contact p 
-    text-align: center
-    letter-spacing: 5px
-
-.contact a 
-    color: $light-dark
-    text-decoration: none
-
-.break 
-    display: none
-
-.clearfix 
-    clear: both
-    height: 3%
-
-.parallax 
-    background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center fixed
-    background-size: cover
-    opacity: .5
-
-.parallax-inner 
-    padding-top: 17%
+//start contact page
+.contact 
+    p 
+        text-align: center
+        letter-spacing: 5px
+    a 
+        color: $light-dark
+        text-decoration: none
+    .break 
+        display: none
 
 .social 
     list-style-type: none
     text-align: center
+    li 
+        display: inline
+    i 
+        font-size: 270%
+        margin: 1% 5% 7% 4%
+        color: $light-dark
+        &:hover 
+            color: #606060
 
-.social li 
-    display: inline
-
-.social i 
-    font-size: 270%
-    margin: 1% 5% 7% 4%
-    color: $light-dark
-
-.social i:hover 
-    color: #606060
-
+// start parallax effect 
+.parallax 
+    background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center fixed
+    background-size: cover
+    opacity: .5
+    .parallax-inner 
+        padding-top: 17%
+// end parallax effect 
+//start footer
 footer.second 
     background-color: #2C2C2C
-
-footer.second p 
-    color: $pure-white
-    text-align: center
-    padding: 5%
+    p 
+        color: $pure-white
+        text-align: center
+        padding: 5%
+//end footer
+//end contact page
 
 @media screen and (max-width: 768px) 
     #menu-icon 
@@ -259,12 +266,14 @@ footer.second p
     h2 
         font-size: 160%
 
-    .left-col 
+    .service-left-col,
+    .about-left-col
         width: 96%
         margin: 0 0 3% 0
         padding: 0 2%
 
-    .sidebar 
+    .service-sidebar,
+    .about-sidebar 
         width: 96%
         margin: 0 auto
 

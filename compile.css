@@ -50,8 +50,12 @@ img {
   height: auto;
   width: auto; }
 
+.clearfix {
+  clear: both;
+  height: 3%; }
+
 /*----------------------------*/
- * /*Start styles intro */
+ * /*Start elem. styles */
 /*---------------------------- */
 .intro {
   height: 100%;
@@ -150,79 +154,67 @@ nav ul li a:hover:before {
   width: 48%;
   float: left;
   margin: 4% 4% 0 4%; }
-
-.service-left-col {
-  width: 48%;
-  float: left;
-  margin: 0 4%; }
-
-.service-left-col > p,
-.about-left-col > p {
-  text-indent: 6%; }
+  .about-left-col > p {
+    text-indent: 6%; }
 
 .about-sidebar {
   width: 40%;
   float: left;
   margin: 6% 4% 0 0; }
 
+.one-third-port {
+  width: 29.33333%;
+  padding: 2%;
+  float: left; }
+  .one-third-port img:hover {
+    opacity: 0.6; }
+
+.service-left-col {
+  width: 48%;
+  float: left;
+  margin: 0 4%; }
+  .service-left-col > p {
+    text-indent: 6%; }
+
 .service-sidebar {
   width: 40%;
   float: left;
   margin: 2% 4% 2% 0; }
 
-.one-third-port {
-  width: 29.33333%;
-  padding: 2%;
-  float: left; }
-
-.one-third-port img:hover {
-  opacity: 0.6; }
-
 .contact p {
   text-align: center;
   letter-spacing: 5px; }
-
 .contact a {
   color: #2C2C2C;
   text-decoration: none; }
-
-.break {
+.contact .break {
   display: none; }
 
-.clearfix {
-  clear: both;
-  height: 3%; }
+.social {
+  list-style-type: none;
+  text-align: center; }
+  .social li {
+    display: inline; }
+  .social i {
+    font-size: 270%;
+    margin: 1% 5% 7% 4%;
+    color: #2C2C2C; }
+    .social i:hover {
+      color: #606060; }
 
 .parallax {
   background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center fixed;
   background-size: cover;
   opacity: 0.5; }
-
-.parallax-inner {
-  padding-top: 17%; }
-
-.social {
-  list-style-type: none;
-  text-align: center; }
-
-.social li {
-  display: inline; }
-
-.social i {
-  font-size: 270%;
-  margin: 1% 5% 7% 4%;
-  color: #2C2C2C; }
-
-.social i:hover {
-  color: #606060; }
+  .parallax .parallax-inner {
+    padding-top: 17%; }
 
 footer.second {
   background-color: #2C2C2C; }
-
-footer.second p {
-  color: #fff;
-  text-align: center;
-  padding: 5%; }
+  footer.second p {
+    color: #fff;
+    text-align: center;
+    padding: 5%; }
 
 @media screen and (max-width: 768px) {
   #menu-icon {
@@ -246,12 +238,14 @@ footer.second p {
   h2 {
     font-size: 160%; }
 
-  .left-col {
+  .service-left-col,
+  .about-left-col {
     width: 96%;
     margin: 0 0 3% 0;
     padding: 0 2%; }
 
-  .sidebar {
+  .service-sidebar,
+  .about-sidebar {
     width: 96%;
     margin: 0 auto; }
 
