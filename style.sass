@@ -8,8 +8,8 @@
 html, body 
     margin: 0
     padding: 0
-    height: 100%
-    width: 100%
+    height: 100vh
+    width: 100vw
 body 
     font-size: $document-font-size
     overflow-x: hidden
@@ -73,7 +73,6 @@ img
     background-size: cover
     display: table
     top: 0
-    z-index: -1
     .inner 
         display: table-cell
         vertical-align: middle
@@ -100,7 +99,6 @@ nav
     -webkit-transform: translate(-50%,-50%)
     transform: translate(-50%,-50%)
     cursor: pointer
-    z-index: 100
     // JS: when click show menu 
     &.menu-active + ul 
         display: block
@@ -118,7 +116,6 @@ nav ul
     z-index: 1000
     list-style: none
     float: left
-    z-index: 100
     li 
         width: 100%
         padding: 8px 0 10px 7px
