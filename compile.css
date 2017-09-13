@@ -91,7 +91,8 @@ nav {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  cursor: pointer; }
   #menu-icon.menu-active + ul {
     display: block; }
 
@@ -99,7 +100,7 @@ nav ul {
   display: none;
   position: relative;
   margin: 0;
-  padding-left: 30px;
+  padding: 0;
   left: 100%;
   top: 34%;
   width: 130px;
@@ -220,16 +221,16 @@ footer.second {
     padding: 5%; }
 
 @media screen and (max-width: 1024px) {
+  .parallax {
+    background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center;
+    background-size: cover; }
+
   body {
     font-size: 13px; } }
 @media screen and (max-width: 768px) {
   body {
     font-size: 10px; } }
 @media screen and (max-width: 425px) {
-  .parallax {
-    background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center;
-    background-size: cover; }
-
   h2 {
     margin: 0 auto 15px auto; }
     h2:before {
