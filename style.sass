@@ -69,10 +69,11 @@ img
     height: 100%
     width: 100%
     margin: auto
-    // background: url(https://static.pexels.com/photos/132037/pexels-photo-132037.jpeg) no-repeat 50% 50%
+    background: url(https://static.pexels.com/photos/132037/pexels-photo-132037.jpeg) no-repeat center center
     background-size: cover
     display: table
     top: 0
+    z-index: -1
     .inner 
         display: table-cell
         vertical-align: middle
@@ -99,6 +100,7 @@ nav
     -webkit-transform: translate(-50%,-50%)
     transform: translate(-50%,-50%)
     cursor: pointer
+    z-index: 100
     // JS: when click show menu 
     &.menu-active + ul 
         display: block
@@ -116,6 +118,7 @@ nav ul
     z-index: 1000
     list-style: none
     float: left
+    z-index: 100
     li 
         width: 100%
         padding: 8px 0 10px 7px
