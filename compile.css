@@ -222,7 +222,8 @@ footer.second {
 
 @media screen and (max-width: 1024px) {
   .parallax {
-    display: none; }
+    background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center;
+    background-size: cover; }
 
   body {
     font-size: 13px; } }
@@ -303,5 +304,8 @@ footer.second {
     padding: 0;
     margin-top: sas20px;
     margin-bottom: 0; } }
+@media screen and (max-width: 325px) {
+  .contact p {
+    font-size: 1.3em; } }
 
 /*# sourceMappingURL=compile.css.map */
