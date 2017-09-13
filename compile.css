@@ -222,20 +222,13 @@ footer.second {
 
 @media screen and (max-width: 1024px) {
   .parallax {
-    background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center;
-    background-size: cover; }
+    display: none; }
 
   body {
     font-size: 13px; } }
 @media screen and (max-width: 768px) {
   body {
-    font-size: 10px; } }
-@media screen and (max-width: 425px) {
-  h2 {
-    margin: 0 auto 15px auto; }
-    h2:before {
-      height: 2px;
-      bottom: -15%; }
+    font-size: 10px; }
 
   .intro nav #menu-icon {
     top: 5%;
@@ -254,7 +247,13 @@ footer.second {
     margin: 0;
     text-align: center; }
     .intro .inner h1 {
-      font-size: 2em; }
+      font-size: 2em; } }
+@media screen and (max-width: 425px) {
+  h2 {
+    margin: 0 auto 15px auto; }
+    h2:before {
+      height: 2px;
+      bottom: -15%; }
 
   #about {
     display: table; }

@@ -249,19 +249,12 @@ footer.second
 //start media query 
 +media(1024px)
     .parallax
-        background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center
-        background-size: cover
+        display: none
     body 
         font-size: 13px
 +media(768px)
     body 
         font-size: 10px
-+media(425px)
-    h2
-        margin: 0 auto 15px auto
-        &:before
-            height: 2px
-            bottom: -15%
     .intro
         nav
             #menu-icon
@@ -282,6 +275,13 @@ footer.second
             text-align: center
             h1
                 font-size: 2em
+    
++media(425px)
+    h2
+        margin: 0 auto 15px auto
+        &:before
+            height: 2px
+            bottom: -15%
     
     #about 
         display: table
