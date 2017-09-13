@@ -209,6 +209,13 @@ nav ul li a:hover:before {
     .social i:hover {
       color: #606060; }
 
+.parallax {
+  background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.5; }
+  .parallax .parallax-inner {
+    padding-top: 17%; }
+
 footer.second {
   background-color: #2C2C2C; }
   footer.second p {
