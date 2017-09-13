@@ -5,7 +5,9 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  width: 100%;
+  width: 100%; }
+
+body {
   font-size: 16px;
   overflow-x: hidden; }
 
@@ -224,6 +226,10 @@ footer.second {
   body {
     font-size: 10px; } }
 @media screen and (max-width: 425px) {
+  .parallax {
+    background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center;
+    background-size: cover; }
+
   h2 {
     margin: 0 auto 15px auto; }
     h2:before {
@@ -295,7 +301,7 @@ footer.second {
   #contact footer .social {
     height: 40px;
     padding: 0;
-    margin-top: 20px;
+    margin-top: sas20px;
     margin-bottom: 0; } }
 
 /*# sourceMappingURL=compile.css.map */
