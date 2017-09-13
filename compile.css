@@ -65,9 +65,11 @@ img {
   height: 100%;
   width: 100%;
   margin: auto;
+  background: url(https://static.pexels.com/photos/132037/pexels-photo-132037.jpeg) no-repeat center center;
   background-size: cover;
   display: table;
-  top: 0; }
+  top: 0;
+  z-index: -1; }
   .intro .inner {
     display: table-cell;
     vertical-align: middle;
@@ -91,7 +93,8 @@ nav {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 100; }
   #menu-icon.menu-active + ul {
     display: block; }
 
@@ -105,7 +108,8 @@ nav ul {
   width: 130px;
   z-index: 1000;
   list-style: none;
-  float: left; }
+  float: left;
+  z-index: 100; }
   nav ul li {
     width: 100%;
     padding: 8px 0 10px 7px;
