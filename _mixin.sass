@@ -1,4 +1,7 @@
-$document-font-size: 16px
-$light-dark: #2C2C2C
-$pure-white: #fff
-$Raleway: 'Raleway'
+=media($max-width)
+    @media screen and (max-width : $max-width)
+        @content
+
+=mobile-struc-block
+    width: 82%
+    margin: 0 8% 0 8%

@@ -6,7 +6,8 @@ html, body {
   padding: 0;
   height: 100%;
   width: 100%;
-  font-size: 16px; }
+  font-size: 16px;
+  overflow-x: hidden; }
 
 h1 {
   font-family: "Playfair Display", serif;
@@ -29,7 +30,7 @@ h2 {
   h2:before {
     content: "";
     position: absolute;
-    bottom: -3%;
+    bottom: -10%;
     left: -5%;
     right: -5%;
     width: 110%;
@@ -58,6 +59,7 @@ img {
  * /*Start elem. styles */
 /*---------------------------- */
 .intro {
+  position: relative;
   height: 100%;
   width: 100%;
   margin: auto;
@@ -75,9 +77,8 @@ img {
       margin: auto; }
 
 nav {
-  padding-left: 30px;
   height: 100vh;
-  width: 40px; }
+  width: 70px; }
 
 #menu-icon {
   width: 30px;
@@ -216,54 +217,85 @@ footer.second {
     text-align: center;
     padding: 5%; }
 
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 13px; } }
 @media screen and (max-width: 768px) {
-  #menu-icon {
-    margin: 26px 0 0 26px; }
-
-  nav ul, nav:active ul {
-    padding: 8px 0;
-    left: 23px;
-    top: 34px;
-    width: 50%; }
-
-  .inner {
-    font-size: 120%; }
-
-  .content h1 {
-    font-size: 180%; }
-
-  p {
-    font-size: 120%; }
-
+  body {
+    font-size: 10px; } }
+@media screen and (max-width: 425px) {
   h2 {
-    font-size: 160%; }
+    margin: 0 auto 15px auto; }
+    h2:before {
+      height: 2px;
+      bottom: -15%; }
 
-  .service-left-col,
-  .about-left-col {
-    width: 96%;
-    margin: 0 0 3% 0;
-    padding: 0 2%; }
+  .intro nav #menu-icon {
+    top: 5%;
+    background-size: 60px 60px; }
+  .intro nav ul {
+    padding-left: 10px;
+    left: 0;
+    top: 5%; }
+  .intro .inner {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    vertical-align: baseline;
+    display: block;
+    padding: 0;
+    margin: 0;
+    text-align: center; }
+    .intro .inner h1 {
+      font-size: 2em; }
 
-  .service-sidebar,
-  .about-sidebar {
-    width: 96%;
-    margin: 0 auto; }
-
-  img {
-    padding: 2%; }
+  #about {
+    display: table; }
+    #about .about-left-col {
+      display: table-footer-group;
+      width: 82%;
+      margin: 0 8% 0 8%; }
+      #about .about-left-col h2 {
+        margin: 15px auto 15px auto; }
+      #about .about-left-col p {
+        font-size: 1.4em; }
+    #about .about-sidebar {
+      display: table-header-group;
+      width: 100%;
+      float: none;
+      text-align: center; }
+      #about .about-sidebar img {
+        max-width: 90%; }
 
   .one-third-port {
-    width: 96%;
-    margin: 0 auto;
+    width: 45%;
     padding: 0; }
+    .one-third-port:nth-child(odd) {
+      margin: 1% 1% 0 4%; }
+    .one-third-port:nth-child(even) {
+      margin: 1% 4% 0 1%; }
 
-  .break {
-    display: block; }
+  #serv h2 {
+    margin: 0 auto 5px auto; }
+  #serv .service-left-col {
+    width: 82%;
+    margin: 0 8% 0 8%; }
+    #serv .service-left-col p {
+      font-size: 1.4em; }
+  #serv .service-sidebar {
+    width: 82%;
+    margin: 0 8% 0 8%; }
 
-  .parallax {
-    display: none; }
-
-  .social i {
-    font-size: 170%; } }
+  #contact .contact p {
+    letter-spacing: 4.5px;
+    width: 82%;
+    margin: 0 8% 0 8%; }
+    #contact .contact p .break {
+      display: block; }
+  #contact footer .social {
+    height: 40px;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 0; } }
 
 /*# sourceMappingURL=compile.css.map */
