@@ -1,13 +1,9 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css);
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway);
-html, body {
+body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  width: 100vw; }
-
-body {
   font-size: 16px;
   overflow-x: hidden;
   background: white; }
@@ -65,7 +61,6 @@ img {
   position: relative;
   height: 100%;
   width: 100%;
-  margin: auto;
   background: url(https://static.pexels.com/photos/132037/pexels-photo-132037.jpeg) no-repeat center center;
   background-size: cover;
   top: 0; }
@@ -74,8 +69,6 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    vertical-align: baseline;
-    display: block;
     padding: 0;
     margin: 0;
     text-align: center; }
@@ -172,12 +165,24 @@ nav ul li a:hover:before {
   float: left;
   margin: 6% 4% 0 0; }
 
-.one-third-port {
-  width: 29.33333%;
-  padding: 2%;
-  float: left; }
-  .one-third-port img:hover {
-    opacity: 0.6; }
+#port {
+  text-align: center;
+  overflow: auto;
+  box-sizing: border-box; }
+  #port .one-third-port {
+    width: calc(100% / 3 - 3%);
+    height: 300px;
+    overflow: hidden;
+    margin: 1%;
+    float: left; }
+    #port .one-third-port:nth-of-type(1), #port .one-third-port:nth-of-type(4) {
+      margin-left: 2%; }
+    #port .one-third-port:nth-of-type(2), #port .one-third-port:nth-of-type(5) {
+      margin: 1% 1.5%; }
+    #port .one-third-port:nth-of-type(3), #port .one-third-port:nth-of-type(6) {
+      margin-right: 2%; }
+    #port .one-third-port img:hover {
+      opacity: 0.6; }
 
 .service-left-col {
   width: 48%;
@@ -253,30 +258,25 @@ footer.second {
       height: 2px;
       bottom: -15%; }
 
-  #about {
-    display: table; }
-    #about .about-left-col {
-      display: table-footer-group;
-      width: 82%;
-      margin: 0 8% 0 8%; }
-      #about .about-left-col h2 {
-        margin: 15px auto 15px auto; }
-      #about .about-left-col p {
-        font-size: 14px; }
-    #about .about-sidebar {
-      display: table-header-group;
-      width: 100%;
-      float: none;
-      text-align: center; }
-      #about .about-sidebar img {
-        max-width: 90%; }
+  #about .about-left-col {
+    width: 82%;
+    margin: 0 8% 0 8%; }
+    #about .about-left-col h2 {
+      margin: 15px auto 15px auto; }
+    #about .about-left-col p {
+      font-size: 14px; }
+  #about .about-sidebar {
+    float: none;
+    width: 82%;
+    margin: 0 8% 0 8%;
+    margin-bottom: 10px; }
 
   .one-third-port {
     width: 45%;
     padding: 0; }
-    .one-third-port:nth-child(odd) {
-      margin: 1% 1% 0 4%; }
     .one-third-port:nth-child(even) {
+      margin: 1% 1% 0 4%; }
+    .one-third-port:nth-child(odd) {
       margin: 1% 4% 0 1%; }
 
   #serv h2 {
