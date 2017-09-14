@@ -270,6 +270,9 @@ footer.second
         background-size: cover
     body 
         font-size: 13px
+    #port
+        .one-third-port
+            height: 200px
 +media(768px)
     body 
         font-size: 10px
@@ -285,10 +288,12 @@ footer.second
         .inner 
             h1
                 font-size: 40px
-    
+    #port
+        .one-third-port
+            height: 160px
 +media(425px)
     h2
-        margin: 0 auto 15px auto
+        margin: 15px auto
         &:before
             height: 2px
             bottom: -15%
@@ -305,17 +310,17 @@ footer.second
             +mobile-struc-block
             margin-bottom: 10px
 
-    .one-third-port
-        width: 45%
-        padding: 0
-        &:nth-child(even)
-            margin: 1% 1% 0 4%
-        &:nth-child(odd)
-            margin: 1% 4% 0 1%
+    #port
+        .one-third-port
+            width: 45%
+            padding: 0
+            height: 130px
+            &:nth-child(even)
+                margin: 1% 1% 0 4%
+            &:nth-child(odd)
+                margin: 1% 4% 0 1%
 
     #serv
-        h2
-            margin: 0 auto 5px auto
         .service-left-col
             +mobile-struc-block
             p
