@@ -67,18 +67,23 @@ img {
   margin: auto;
   background: url(https://static.pexels.com/photos/132037/pexels-photo-132037.jpeg) no-repeat center center;
   background-size: cover;
-  display: table;
   top: 0; }
   .intro .inner {
-    display: table-cell;
-    vertical-align: middle;
-    width: 100%;
-    max-width: none; }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    vertical-align: baseline;
+    display: block;
+    padding: 0;
+    margin: 0;
+    text-align: center; }
     .intro .inner .content {
       max-width: 600px;
       margin: auto; }
 
 nav {
+  display: inline-block;
   height: 100vh;
   width: 70px; }
 
@@ -238,17 +243,8 @@ footer.second {
     padding-left: 10px;
     left: 0;
     top: 5%; }
-  .intro .inner {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    vertical-align: baseline;
-    display: block;
-    padding: 0;
-    margin: 0;
-    text-align: center; }
-    .intro .inner h1 {
-      font-size: 2em; } }
+  .intro .inner h1 {
+    font-size: 2em; } }
 @media screen and (max-width: 425px) {
   h2 {
     margin: 0 auto 15px auto; }
