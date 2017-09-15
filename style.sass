@@ -29,7 +29,7 @@ h2
     font-size: 2em
     color: $light-dark
     text-align: center
-    margin: 0 auto 30px auto
+    margin: 15px auto
     &:before 
         content: ''
         position: absolute
@@ -64,8 +64,8 @@ img
 // start intro 
 .intro 
     position: relative
-    height: 100%
-    width: 100%
+    height: 100vh
+    width: 100vw
     background: url(https://static.pexels.com/photos/132037/pexels-photo-132037.jpeg) no-repeat center center
     background-size: cover
     top: 0
@@ -83,17 +83,18 @@ img
 
 // + start nav 
 nav 
+    position: relative
     display: inline-block
-    height: 100vh
+    height: 100%
     width: 70px
 
 // ++ start menu nav. icon
 #menu-icon 
     width: 30px
-    height: 26px
+    height: 30px
     background: url(img/nav-icon.png) center center
     display: inline-block
-    position: relative
+    position: absolute
     top: 50%
     left: 50%
     -webkit-transform: translate(-50%,-50%)
@@ -107,11 +108,11 @@ nav
 // ++ start menu nav. item
 nav ul 
     display: none
-    position: relative
+    position: absolute
     margin: 0
     padding: 0
     left: 100%
-    top: 34%
+    top: 37%
     width: 130px
     z-index: 1000
     list-style: none
@@ -234,6 +235,8 @@ nav ul li a:hover:before
         display: none
 
 .social 
+    padding: 0
+    height: 90px
     list-style-type: none
     text-align: center
     li 
@@ -260,6 +263,7 @@ footer.second
         color: $pure-white
         text-align: center
         padding: 5%
+        margin: 0
 //end footer
 //end contact page
 
@@ -274,30 +278,28 @@ footer.second
         .one-third-port
             height: 200px
 +media(768px)
+    nav ul li 
+        font-size: 1.5em
     body 
         font-size: 10px
     .intro
-        nav
-            #menu-icon
-                top: 5%
-                background-size: 60px 60px
-            ul 
-                padding-left: 10px
-                left: 0
-                top: 5%
         .inner 
             h1
                 font-size: 40px
     #port
         .one-third-port
             height: 160px
-+media(425px)
-    h2
-        margin: 15px auto
-        &:before
-            height: 2px
-            bottom: -15%
-    
+    .social
+        height: 40px
+        margin: 20px 0
++media(425px)    
+    nav
+        #menu-icon
+            top: 5%
+            background-size: 60px 60px
+        ul 
+            left: 23%
+            top: 9%
     #about 
         .about-left-col
             +mobile-struc-block
@@ -306,9 +308,7 @@ footer.second
             p
                 font-size: 14px
         .about-sidebar
-            float: none
-            +mobile-struc-block
-            margin-bottom: 10px
+            display: none
 
     #port
         .one-third-port
@@ -335,16 +335,9 @@ footer.second
                 +mobile-struc-block
                 .break
                     display: block
-        footer
-            .social 
-                height: 40px
-                padding: 0
-                margin-top: sas20px
-                margin-bottom: 0
-
 
 +media(325px)
     .contact
         p 
-            font-size: 13px
+            font-size: 1.3em
     
