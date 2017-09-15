@@ -4,7 +4,7 @@ body {
   padding: 0;
   font-size: 16px;
   overflow-x: hidden;
-  background: black; }
+  background: white; }
 
 h1 {
   font-family: "Playfair Display", Arial, Helvetica, sans-serif;
@@ -22,7 +22,6 @@ h2 {
   font-size: 2em;
   color: #2C2C2C;
   text-align: center;
-  margin: 15px auto;
   text-decoration: underline; }
 
 p {
@@ -49,6 +48,8 @@ img {
   position: relative;
   height: 100vh;
   width: 100vw;
+  background: url(https://static.pexels.com/photos/132037/pexels-photo-132037.jpeg) no-repeat center center;
+  background-size: cover;
   top: 0; }
   .intro .inner {
     position: absolute;
@@ -140,17 +141,18 @@ nav ul li a:hover:before {
     text-align: center;
     margin-top: -10%; }
 
-.about-left-col {
-  width: 48%;
-  float: left;
-  margin: 4% 4% 0 4%; }
-  .about-left-col > p {
-    text-indent: 6%; }
-
-.about-sidebar {
-  width: 40%;
-  float: left;
-  margin: 6% 4% 0 0; }
+#about {
+  overflow: auto; }
+  #about .about-left-col {
+    width: 48%;
+    float: left;
+    margin: 4% 4% 0 4%; }
+    #about .about-left-col > p {
+      text-indent: 6%; }
+  #about .about-sidebar {
+    width: 40%;
+    float: left;
+    margin: 6% 4% 0 0; }
 
 #port {
   text-align: center;
@@ -207,6 +209,8 @@ nav ul li a:hover:before {
       color: #606060; }
 
 .parallax {
+  background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center fixed;
+  background-size: cover;
   opacity: 0.5; }
   .parallax .parallax-inner {
     padding-top: 17%; }
@@ -220,6 +224,10 @@ footer.second {
     margin: 0; }
 
 @media screen and (max-width: 1024px) {
+  .parallax {
+    background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center;
+    background-size: cover; }
+
   body {
     font-size: 13px; }
 

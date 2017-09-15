@@ -10,7 +10,7 @@ body
     padding: 0
     font-size: $document-font-size
     overflow-x: hidden
-    background: black
+    background: white
 h1 
     font-family: 'Playfair Display', Arial, Helvetica, sans-serif
     font-size: 3em
@@ -27,7 +27,6 @@ h2
     font-size: 2em
     color: $light-dark
     text-align: center
-    margin: 15px auto
     text-decoration: underline
 
 p 
@@ -56,8 +55,8 @@ img
     position: relative
     height: 100vh
     width: 100vw
-    // background: url(https://static.pexels.com/photos/132037/pexels-photo-132037.jpeg) no-repeat center center
-    // background-size: cover
+    background: url(https://static.pexels.com/photos/132037/pexels-photo-132037.jpeg) no-repeat center center
+    background-size: cover
     top: 0
     .inner 
         position: absolute
@@ -160,17 +159,18 @@ nav ul li a:hover:before
 // + end homepage text (center)
 
 //start about page 
-.about-left-col 
-    width: 48%
-    float: left
-    margin: 4% 4% 0 4%
-    & > p 
-        text-indent: 6%
-
-.about-sidebar 
-    width: 40%
-    float: left
-    margin: 6% 4% 0 0
+#about
+    overflow: auto
+    .about-left-col 
+        width: 48%
+        float: left
+        margin: 4% 4% 0 4%
+        & > p 
+            text-indent: 6%
+    .about-sidebar 
+        width: 40%
+        float: left
+        margin: 6% 4% 0 0
 //end about page
 
 //start portfolio page
@@ -240,8 +240,8 @@ nav ul li a:hover:before
 
 // start parallax effect 
 .parallax 
-    // background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center fixed
-    // background-size: cover
+    background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center fixed
+    background-size: cover
     opacity: .5
     .parallax-inner 
         padding-top: 17%
@@ -260,8 +260,8 @@ footer.second
 //start media query 
 +media(1024px)
     .parallax
-        // background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center
-        // background-size: cover
+        background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center
+        background-size: cover
     body 
         font-size: 13px
     #port
