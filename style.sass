@@ -1,333 +1,312 @@
-// @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css) // reset all css on all browsers
-// // @import url(https://fonts.googleapis.com/css?family=Raleway)  // Nav font 
-// // @import url(https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway)  //Heading Font
-// @import 'variable'
-// @import 'mixin'
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css) // reset all css on all browsers
+@import url(https://fonts.googleapis.com/css?family=Raleway)  // Nav font 
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway)  //Heading Font
+@import 'variable'
+@import 'mixin'
 
-// //global styles
-// body 
-//     margin: 0
-//     padding: 0
-//     font-size: $document-font-size
-//     overflow-x: hidden
-//     background: white
-// h1 
-//     font-family: 'Playfair Display', Arial, Helvetica, sans-serif
-//     font-size: 3em
-//     font-weight: 700
-//     color: $pure-white
-//     text-align: center
-//     padding: 2%
-//     margin-bottom: 30px
-//     text-shadow: 0px 0px 250px #000
+//global styles
+body 
+    margin: 0
+    padding: 0
+    font-size: $document-font-size
+    background: white
+h1 
+    font-family: 'Playfair Display', Arial, Helvetica, sans-serif
+    font-size: 3em
+    font-weight: 700
+    color: $pure-white
+    text-align: center
+    padding: 2%
+    margin-bottom: 30px
+    text-shadow: 0 2px 4px #000
 
-// h2 
-//     position: relative
-//     font-family: 'Playfair Display',  Arial, Helvetica, sans-serif
-//     font-size: 2em
-//     color: $light-dark
-//     text-align: center
-//     text-decoration: underline
+h2 
+    position: relative
+    font-family: 'Playfair Display',  Arial, Helvetica, sans-serif
+    font-size: 2em
+    color: $light-dark
+    text-align: center
+    text-decoration: underline
 
-// p 
-//     font-family: $Raleway, Arial, Helvetica, sans-serif
-//     color: $light-dark
-//     font-size: 1.4em
-//     line-height: 190%
-//     text-align: justify
-//     font-weight: 300
+p 
+    font-family: $Raleway, Arial, Helvetica, sans-serif
+    color: $light-dark
+    font-size: 1.4em
+    line-height: 190%
+    text-align: justify
+    font-weight: 300
 
-// img 
-//     text-align: center
-//     max-width: 100%
-//     height: auto
-//     width: auto
+img 
+    text-align: center
+    max-width: 100%
+    height: auto
 
-// .clearfix 
-//     clear: both
-// //end global styles
+.clearfix 
+    clear: both
+//end global styles
 
-// /*----------------------------*/
-//     /*Start elem. styles*/ 
-// /*----------------------------*/
-// // start intro 
-// .intro 
-//     position: relative
-//     height: 100vh
-//     width: 100vw
-//     background: url(https://static.pexels.com/photos/132037/pexels-photo-132037.jpeg) no-repeat center center
-//     background-size: cover
-//     top: 0
-//     .inner 
-//         position: absolute
-//         top: 50%
-//         left: 50%
-//         transform: translate(-50%,-50%)
-//         padding: 0
-//         margin: 0
-//         text-align: center
-//         .content 
-//             max-width: 600px
-//             margin: auto
+/*----------------------------*/
+    /*Start elem. styles*/ 
+/*----------------------------*/
+// start intro 
+.intro 
+    position: relative
+    height: 100vh
+    width: 100vw
+    background: url(https://static.pexels.com/photos/132037/pexels-photo-132037.jpeg) no-repeat center center
+    background-size: cover
+    top: 0
+    .inner 
+        +abso-center(absolute)
+        padding: 0
+        margin: 0
+        text-align: center
+        max-width: 600px
+        font-size: 1.7em
+        line-height: 1.6
+        .content 
+            max-width: 600px
+            p 
+                color: $pure-white
+                text-align: center
+                margin-top: -10%
+// + end homepage text (center)
+// + start nav 
+nav 
+    position: relative
+    display: inline-block
+    height: 100%
+    width: 70px
 
-// // + start nav 
-// nav 
-//     position: relative
-//     display: inline-block
-//     height: 100%
-//     width: 70px
+// ++ start menu nav. icon
+#menu-icon 
+    width: 30px
+    height: 30px
+    background: url(img/nav-icon.png) center center
+    display: inline-block
+    +abso-center(absolute)
+    cursor: pointer
+    // JS: when click show menu 
+    &.menu-active + ul 
+        display: block
+// ++ end menu nav. icon
 
-// // ++ start menu nav. icon
-// #menu-icon 
-//     width: 30px
-//     height: 30px
-//     background: url(img/nav-icon.png) center center
-//     display: inline-block
-//     position: absolute
-//     top: 50%
-//     left: 50%
-//     -webkit-transform: translate(-50%,-50%)
-//     transform: translate(-50%,-50%)
-//     cursor: pointer
-//     // JS: when click show menu 
-//     &.menu-active + ul 
-//         display: block
-// // ++ end menu nav. icon
+// ++ start menu nav. item
+nav ul 
+    display: none
+    position: absolute
+    margin: 0
+    padding: 0
+    left: 100%
+    top: 37%
+    width: 130px
+    list-style: none
+    float: left
+    li 
+        width: 100%
+        padding: 8px 0 10px 7px
+        margin: 0 
+        font-family: $Raleway, sans-serif
+        font-size: 120%
+        a 
+            padding-bottom: 1px
+            font-weight: 600
+            position: relative
+            color: $pure-white
+            text-decoration: none
+// ++ end menu nav. item
 
-// // ++ start menu nav. item
-// nav ul 
-//     display: none
-//     position: absolute
-//     margin: 0
-//     padding: 0
-//     left: 100%
-//     top: 37%
-//     width: 130px
-//     z-index: 1000
-//     list-style: none
-//     float: left
-//     li 
-//         width: 100%
-//         padding: 8px 0 10px 7px
-//         margin: 0 
-//         font-family: $Raleway, sans-serif
-//         font-size: 120%
-//         a 
-//             padding-bottom: 1px
-//             font-weight: 600
-//             position: relative
-//             color: $pure-white
-//             text-decoration: none
-// // ++ end menu nav. item
+/*--------start underline animation---------*/
+nav ul li a:before 
+    content: ''
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    height: 2px
+    visibility: hidden
+    transform: scaleX(0)
+    transform-origin: left
+    background: white
+    transition: 0.3s linear
 
-// /*--------start underline animation---------*/
-// nav ul li a:before 
-//     content: ''
-//     position: absolute
-//     left: 0
-//     bottom: 0
-//     width: 100%
-//     height: 2px
-//     visibility: hidden
-//     -webkit-transform: scaleX(0)
-//     transform: scaleX(0)
-//     -webkit-transform-origin: left
-//     transform-origin: left
-//     background: white
-//     -webkit-transition: 0.3s linear
-//     transition: 0.3s linear
+nav ul li a:hover:before 
+    visibility: visible
+    transform: scaleX(1)
+/*--------end underline animation---------*/
+// + end nav
+// end intro 
 
-// nav ul li a:hover:before 
-//     visibility: visible
-//     -webkit-transform: scaleX(1)
-//     transform: scaleX(1)
-// /*--------end underline animation---------*/
-// // + end nav
-// // end intro 
+//start about page 
+#about
+    overflow: auto
+    .about-left-col 
+        width: 48%
+        float: left
+        margin: 4% 4% 0 4%
+        & > p 
+            text-indent: 6%
+    .about-sidebar 
+        width: 40%
+        float: left
+        margin: 6% 4% 0 0
+//end about page
 
-// // + start homepage text (center)
-// .inner 
-//     max-width: 600px
-//     margin: auto
-//     font-size: 1.7em
-//     line-height: 1.6
-//     padding: 10px
-//     .content p 
-//         color: $pure-white
-//         text-align: center
-//         margin-top: -10%
-// // + end homepage text (center)
+//start portfolio page
+#port
+    text-align: center
+    overflow: auto
+    box-sizing: border-box
+    .one-third-port 
+        width: calc(100% / 3 - 3%)
+        height: $custom-img-height
+        overflow: hidden
+        margin: 1%
+        &:nth-of-type(1), 
+        &:nth-of-type(4) 
+            margin-left: 2%
+        &:nth-of-type(2), 
+        &:nth-of-type(5) 
+            margin: 1% 1.5%
+        &:nth-of-type(3), 
+        &:nth-of-type(6) 
+            margin-right: 2%
+        // height: 200px
+        // overflow: hidden
+        float: left
+        img:hover 
+            opacity: .6
+//end portfolio page 
 
-// //start about page 
-// #about
-//     overflow: auto
-//     .about-left-col 
-//         width: 48%
-//         float: left
-//         margin: 4% 4% 0 4%
-//         & > p 
-//             text-indent: 6%
-//     .about-sidebar 
-//         width: 40%
-//         float: left
-//         margin: 6% 4% 0 0
-// //end about page
+//start service page
+.service-left-col 
+    width: 48%
+    float: left
+    margin: 0 4%
+    & > p
+        text-indent: 6%
 
-// //start portfolio page
-// #port
-//     text-align: center
-//     overflow: auto
-//     box-sizing: border-box
-//     .one-third-port 
-//         width: calc(100% / 3 - 3%)
-//         height: $custom-img-height
-//         overflow: hidden
-//         margin: 1%
-//         &:nth-of-type(1), 
-//         &:nth-of-type(4) 
-//             margin-left: 2%
-//         &:nth-of-type(2), 
-//         &:nth-of-type(5) 
-//             margin: 1% 1.5%
-//         &:nth-of-type(3), 
-//         &:nth-of-type(6) 
-//             margin-right: 2%
-//         // height: 200px
-//         // overflow: hidden
-//         float: left
-//         img:hover 
-//             opacity: .6
-// //end portfolio page 
+.service-sidebar 
+    width: 40%
+    float: left
+    margin: 2% 4% 2% 0
+//end service page        
 
-// //start service page
-// .service-left-col 
-//     width: 48%
-//     float: left
-//     margin: 0 4%
-//     & > p
-//         text-indent: 6%
+//start contact page
+.contact 
+    p 
+        text-align: center
+        letter-spacing: 5px
+    a 
+        color: $light-dark
+        text-decoration: none
+    .break 
+        display: none
 
-// .service-sidebar 
-//     width: 40%
-//     float: left
-//     margin: 2% 4% 2% 0
-// //end service page        
+.social 
+    padding: 0
+    height: 90px
+    list-style-type: none
+    text-align: center
+    li 
+        display: inline
+    i 
+        font-size: 270%
+        margin: 1% 5% 7% 4%
+        color: $light-dark
+        &:hover 
+            color: #606060
 
-// //start contact page
-// .contact 
-//     p 
-//         text-align: center
-//         letter-spacing: 5px
-//     a 
-//         color: $light-dark
-//         text-decoration: none
-//     .break 
-//         display: none
+// start parallax effect 
+.parallax 
+    background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center fixed
+    background-size: cover
+    opacity: .5
+    .parallax-inner 
+        padding-top: 17%
+//end parallax effect 
+//start footer
+footer.second 
+    background-color: #2C2C2C
+    p 
+        color: $pure-white
+        text-align: center
+        padding: 5%
+        margin: 0
+//end footer
+//end contact page
 
-// .social 
-//     padding: 0
-//     height: 90px
-//     list-style-type: none
-//     text-align: center
-//     li 
-//         display: inline
-//     i 
-//         font-size: 270%
-//         margin: 1% 5% 7% 4%
-//         color: $light-dark
-//         &:hover 
-//             color: #606060
+//start media query 
++media(1024px)
+    body 
+        font-size: 13px
+    .parallax
+        background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center
+        background-size: cover
+    #port
+        .one-third-port
+            height: 200px
++media(768px)
+    body 
+        font-size: 10px
+    nav ul li 
+        font-size: 1.5em
+    .intro
+        .inner 
+            h1
+                font-size: 40px
+    #port
+        .one-third-port
+            height: 160px
+    .social
+        height: 40px
+        margin: 20px 0
++media(425px)    
+    nav
+        #menu-icon
+            top: 5%
+            background-size: 60px 60px
+        ul 
+            left: 23%
+            top: 9%
+    #about 
+        .about-left-col
+            +mobile-struc-block
+            h2
+                margin: 15px auto 15px auto
+            p
+                font-size: 14px
+        .about-sidebar
+            display: none
 
-// // start parallax effect 
-// .parallax 
-//     background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center fixed
-//     background-size: cover
-//     opacity: .5
-//     .parallax-inner 
-//         padding-top: 17%
-// //end parallax effect 
-// //start footer
-// footer.second 
-//     background-color: #2C2C2C
-//     p 
-//         color: $pure-white
-//         text-align: center
-//         padding: 5%
-//         margin: 0
-// //end footer
-// //end contact page
+    #port
+        .one-third-port
+            width: 45%
+            padding: 0
+            height: 130px
+            &:nth-child(even)
+                margin: 1% 1% 0 4%
+            &:nth-child(odd)
+                margin: 1% 4% 0 1%
 
-// //start media query 
-// +media(1024px)
-//     // body 
-//     //     font-size: 13px
-//     .parallax
-//         background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center
-//         background-size: cover
-//     #port
-//         .one-third-port
-//             height: 200px
-// +media(768px)
-//     // body 
-//     //     font-size: 10px
-//     nav ul li 
-//         font-size: 1.5em
-//     .intro
-//         .inner 
-//             h1
-//                 font-size: 40px
-//     #port
-//         .one-third-port
-//             height: 160px
-//     .social
-//         height: 40px
-//         margin: 20px 0
-// +media(425px)    
-//     nav
-//         #menu-icon
-//             top: 5%
-//             background-size: 60px 60px
-//         ul 
-//             left: 23%
-//             top: 9%
-//     #about 
-//         .about-left-col
-//             +mobile-struc-block
-//             h2
-//                 margin: 15px auto 15px auto
-//             p
-//                 font-size: 14px
-//         .about-sidebar
-//             display: none
+    #serv
+        .service-left-col
+            +mobile-struc-block
+            p
+                font-size: 14px
+        .service-sidebar
+            +mobile-struc-block
 
-//     #port
-//         .one-third-port
-//             width: 45%
-//             padding: 0
-//             height: 130px
-//             &:nth-child(even)
-//                 margin: 1% 1% 0 4%
-//             &:nth-child(odd)
-//                 margin: 1% 4% 0 1%
+    #contact
+        .contact
+            p 
+                letter-spacing: 4.5px
+                +mobile-struc-block
+                .break
+                    display: block
 
-//     #serv
-//         .service-left-col
-//             +mobile-struc-block
-//             p
-//                 font-size: 14px
-//         .service-sidebar
-//             +mobile-struc-block
-
-//     #contact
-//         .contact
-//             p 
-//                 letter-spacing: 4.5px
-//                 +mobile-struc-block
-//                 .break
-//                     display: block
-
-// +media(325px)
-//     .contact
-//         p 
-//             font-size: 1.3em
++media(325px)
+    .contact
+        p 
+            font-size: 1.3em
     
