@@ -51,8 +51,6 @@ img {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background: url(https://static.pexels.com/photos/132037/pexels-photo-132037.jpeg) no-repeat center center;
-  background-size: cover;
   top: 0; }
   .intro .inner {
     position: absolute;
@@ -211,8 +209,6 @@ nav ul li a:hover:before {
       color: #606060; }
 
 .parallax {
-  background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center fixed;
-  background-size: cover;
   opacity: 0.5; }
   .parallax .parallax-inner {
     padding-top: 17%; }
@@ -226,10 +222,6 @@ footer.second {
     margin: 0; }
 
 @media screen and (max-width: 1024px) {
-  .parallax {
-    background: url(https://static.pexels.com/photos/191428/pexels-photo-191428.jpeg) no-repeat center center;
-    background-size: cover; }
-
   body {
     font-size: 13px; }
 
